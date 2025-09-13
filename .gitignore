@@ -206,3 +206,11 @@ marimo/_static/
 marimo/_lsp/
 __marimo__/
 *.deb
+
+# Ignore generated HTML and CSV files
+ygainers.html
+ygainers.csv
+wsjgainers.html
+wsjgainers.csv
+
+
