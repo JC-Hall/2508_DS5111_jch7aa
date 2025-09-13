@@ -8,10 +8,9 @@
 8. Optional - To check installed packages: pip list
 9. To leave the environment: deactivate 
 10. All scripts should be run from the root of the repo
-11. Install chrome headless browser to be able to collect html content.
-11.1. First, clone scripts repo then cd into it
-11.2. Next, run the script with bach install_chrome_headless.sh, if installed correctly you will see <h1>Example Domain</h1> near the bottom
-11.3. Add the script to your repo. Git Add | Git commit | Git push
+11. Installing chrome headless browser to be able to collect html content. First, clone scripts repo then cd into it.
+Next, run the script with bach install_chrome_headless.sh,
+if installed correctly you will see "<h1>Example Domain</h1>" near the bottom. Add the script to your repo. Git Add | Git commit | Git push
 
 
 
