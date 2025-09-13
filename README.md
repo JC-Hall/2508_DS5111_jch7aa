@@ -10,7 +10,7 @@
 10. All scripts should be run from the root of the repo
 11. Installing chrome headless browser to be able to collect html content. First, clone scripts repo then cd into it.
 Next, run the script with bach install_chrome_headless.sh,
-if installed correctly you will see '<h1>Example Domain</h1>' near the bottom. Add the script to your repo. Git Add | Git commit | Git push
+if installed correctly you will see `<h1>Example Domain</h1>` near the bottom. Add the script to your repo. Git Add | Git commit | Git push
 
 
 
