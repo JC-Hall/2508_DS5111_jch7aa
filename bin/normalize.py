@@ -15,6 +15,7 @@ def normalize_y(fname):
 	df['volume'] = df['Volume']
 
 	final = df[['symbol', 'company_name', 'price', 'change', 'perc_change', 'volume']].dropna()
+	final.to_csv('normalized_yahoo.csv', index=False)
 	print(final)
 
 def normalize_wsj(fname):
@@ -28,6 +29,7 @@ def normalize_wsj(fname):
 	df['volume'] = df['Volume']
 
 	final = df[['symbol', 'company_name', 'price', 'change', 'perc_change', 'volume']].dropna()
+	final.to_csv('normalized_wsj.csv', index=False)
 	print(final)	
 
 
