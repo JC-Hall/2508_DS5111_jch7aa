@@ -208,9 +208,7 @@ __marimo__/
 *.deb
 
 # Ignore generated HTML and CSV files
-ygainers.html
-ygainers.csv
-wsjgainers.html
-wsjgainers.csv
+*.html
+*.csv
 
 
