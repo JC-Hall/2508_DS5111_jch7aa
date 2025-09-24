@@ -12,5 +12,5 @@
 Next, run the script with bach install_chrome_headless.sh,
 if installed correctly you will see `<h1>Example Domain</h1>` near the bottom. Add the script to your repo. Git Add | Git commit | Git push
 12. The normalize.py script standardizes stock gainer data from either Yahoo Finance or the Wall Street Journal (WSJ) into a unified CSV format. It extracts and cleans key metrics such as symbol, company name, last price, daily change, percent change, and volume. The script supports command-line execution by passing a CSV filename (e.g., ygainers.csv or wsjgainers.csv). 
-
+13. Includes a working linter and basic test suite. Linting is handled with pylint, configured using a local .pylintrc file. The linter can be run with: make lint. Testing is handled with pytest: make test. Combined: make linttest. 
 
