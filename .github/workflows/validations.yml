@@ -24,21 +24,7 @@ jobs:
       - name: Test with pytest
         run: |
           make test
-  lint:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: ["3.12", "3.13"]
-
-    steps:
-      - uses: actions/checkout@v4
-      - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v4
-        with:
-          python-version: ${{ matrix.python-version }}
-      - name: Install dependencies
-        run: |
-          make update
-      - name: Run linter
+      - name: Run Lint
         run: |
           make lint
+
