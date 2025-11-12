@@ -1,10 +1,10 @@
-from base import GainerBase
+from bin.gainers.base import GainerBase
 import os
 import re
 import pandas as pd
 
 
-class Gainerwsj(GainerBase):
+class GainerWSJ(GainerBase):
     def __init__(self):
         pass
 
@@ -40,7 +40,7 @@ if __name__=="__main__":
     valid_functions = ['html', 'csv', 'normalize']
     assert function in valid_functions, f"Expected one of {valid_functions} but got {function}"
 
-    gainer = Gainerwsj()
+    gainer = GainerWSJ()
 
     if function == 'html':
         gainer.download_html()
