@@ -17,19 +17,19 @@ class GainerWSJ(GainerBase):
         raw = pd.read_html('wsjgainers.html')
         raw[0].to_csv('wsjgainers.csv')
 
-    def normalize_data(self, filepath='wsjgainers.csv'):
+    def normalize_data(self, filepath, outpath):
         print("wsj normalize csv")
         df = pd.read_csv(filepath)
         rex = r'\(([A-Z]+)\)$'
-        df['symbol'] = df['Unnamed: 0'].astype(str).apply(lambda x: re.findall(rex, x)[0])
-        df['company_name'] = df['Unnamed: 0'].astype(str).apply(lambda x: re.findall(rex, x)[0])
+        df['symbol'] = df['Unnamed: 0'].astype(str).str.extract(rex, expand=False)
+        df['company_name'] = df['Unnamed: 0'].astype(str).str.replace(r'\s*\([A-Z]+\)\s*$', '', regex=True)
         df['price'] = df['Last']
         df['change'] = df['Chg']
         df['perc_change'] = df['% Chg']
         df['volume'] = df['Volume']
 
         final = df[['symbol', 'company_name', 'price', 'change', 'perc_change', 'volume']].dropna()
-        final.to_csv('normalized_wsj.csv', index=False)
+        final.to_csv(outpath, index=False)
         print(final)
 
 
