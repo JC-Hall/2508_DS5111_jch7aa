@@ -28,4 +28,11 @@ models:
         data_tests:
           - unique
           - not_null
-        
+
+  - name: unique_syms
+    description: "test unique symbol table"
+    columns:
+      - name: SYMBOL
+        description: "The primary key for this table"
+        data_tests:
+          - unique
