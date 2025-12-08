@@ -15,7 +15,7 @@ class GainerYahoo(GainerBase):
         raw = pd.read_html('ygainers.html')
         raw[0].to_csv('ygainers.csv')
 
-    def normalize_data(self, filepath='ygainers.csv'):
+    def normalize_data(self, filepath, outpath):
         print("yahoo normalize csv")
         df = pd.read_csv(filepath)
         df['symbol'] = df['Symbol']
@@ -30,7 +30,7 @@ class GainerYahoo(GainerBase):
         df['volume'] = df['Volume']
 
         final = df[['symbol', 'company_name', 'price', 'change', 'perc_change', 'volume']].dropna()
-        final.to_csv('normalized_yahoo.csv', index=False)
+        final.to_csv(outpath, index=False)
         print(final)
 
 if __name__=="__main__":
